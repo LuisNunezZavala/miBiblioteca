@@ -100,10 +100,14 @@ public class Login extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				NuevoUsuario nuevoUsuario = new NuevoUsuario();
+				NuevoUsuario nuevoUsuario = new NuevoUsuario(Login.this, "Nuevo usuario", true);
 				nuevoUsuario.setVisible(true);
 			}
 		});
 
+	}
+	
+	public void setUsuario(String usuario) {
+		txtUsuario.setText(usuario);
 	}
 }
